@@ -1,0 +1,68 @@
+bts_info = """
+BTS - Janubiy Koreyaning mashhur K-pop guruhu
+A'zolari: Rm, Jin, Suga, J-hope, Jimin, V, Jungkook
+Debyut: 2013-yil
+Kompaniya: HYBE (BigHit Entertainment)
+Fanlar nomi: ARMY
+"""
+print("=== BTS FAN APP ===")
+
+username = input("Login kiriting: ")
+password = input("Parol kiriting: ")
+
+print("\nXush kelibsiz,", username)
+
+print("\n---BTS HAQIDA MA'LUMOT ---")
+print(bts_info)
+
+questions = [
+  { 
+     "question": "BTS nechanchi yilda debyut qilgan?",
+     "answer": "2013"
+  },
+  { 
+    "question": "BTS fanlarining nomi nima?",
+    "answer": "ARMY"
+  },
+  {
+    "question": "BTS nechta a'zodan iborat?",
+    "answer": "7"
+  },
+  {
+    "question": "BTS kompaniyasining nomi nima?",
+    "answer": "HYBE"
+  },
+  {
+    "question": "BTS guruhining Lideri kim?",
+    "answer": "RM"
+  }
+]
+armycoin = 0
+
+print("\n--- Test Boshlandi ---")
+
+for q in questions:
+  user_answer _ input(q["question"] + " ").lower()
+  if user_answer == q["answer"]:
+    armypoint += 1
+    print("To'g'ri!")
+else:
+  print("Noto'g'ri")
+
+print("\n--- Natija ---")
+print("Siz to'plagan armypointlar soni:", armypoint, )
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
