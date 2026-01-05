@@ -5,16 +5,18 @@ Debyut: 2013-yil
 Kompaniya: HYBE (BigHit Entertainment)
 Fanlar nomi: ARMY
 """
-print("=== BTS FAN APP ===")
+st.title("🎤 BTS FAN APP")
 
-username = input("Login kiriting: ")
-password = input("Parol kiriting: ")
+# Foydalanuvchi login (oddiy input)
+username = st.text_input("Login kiriting:")
+password = st.text_input("Parol kiriting:", type="password")
 
-print("\nXush kelibsiz,", username)
+if username and password:
+    st.write(f"\nXush kelibsiz, {username}!")
+    st.write("---BTS HAQIDA MA'LUMOT---")
+    st.write(bts_info)
 
-print("\n---BTS HAQIDA MA'LUMOT ---")
-print(bts_info)
-
+# Savollar
 questions = [
   ("BTS nechanchi yilda debyut qilgan?", "2013")
   ("BTS fanlari nima deb nima deb ataladi?", "ARMY"),
