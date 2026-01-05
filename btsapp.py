@@ -42,7 +42,7 @@ armycoin = 0
 print("\n--- Test Boshlandi ---")
 
 for q in questions:
-  user_answer == input(q["question"] + " ").lower()
+  user_answer = input(q["question"] + " ").lower()
   if user_answer == q["answer"]:
     armypoint += 1
     print("To'g'ri!")
