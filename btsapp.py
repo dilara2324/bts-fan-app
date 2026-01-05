@@ -31,7 +31,7 @@ if "score" not in st.session_state:
 if st.session_state.q_index < len(questions):
   q, correct = questions[st.session_state.q_index]
 
-st.write(f"**Savol {st.session_state.q_index + 1}:** {q}"]
+st.write(f"**Savol {st.session_state.q_index + 1}:** {q}")
 answer = st.text_input("Javobingiz:", key=st.session_state.q_index)
 
 if st.button("Tekshirish"):
