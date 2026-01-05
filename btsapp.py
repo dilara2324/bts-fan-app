@@ -16,47 +16,33 @@ print("\n---BTS HAQIDA MA'LUMOT ---")
 print(bts_info)
 
 questions = [
-  { 
-     "question": "BTS nechanchi yilda debyut qilgan?",
-     "answer": "2013"
-  },
-  { 
-    "question": "BTS fanlarining nomi nima?",
-    "answer": "ARMY"
-  },
-  {
-    "question": "BTS nechta a'zodan iborat?",
-    "answer": "7"
-  },
-  {
-    "question": "BTS kompaniyasining nomi nima?",
-    "answer": "HYBE"
-  },
-  {
-    "question": "BTS guruhining Lideri kim?",
-    "answer": "RM"
-  }
+  ("BTS nechanchi yilda debyut qilgan?", "2013")
+  ("BTS fanlari nima deb nima deb ataladi?", "ARMY"),
+  ("BTS nechta a'zodan iborat?", "7")
+  ("BTS kompaniyasi nomi?", "HYBE")
+  ("BTS guruhining lideri kim?", "RM")
 ]
-armycoin = 0
+if "score" not in st.session_state:
+  st.session_state.score = 0
+  st.session_state.q_index = 0
 
-print("\n--- Test Boshlandi ---")
+if st.session_state.q_index < len(questions):
+  q, correct = questions[st.session_state.q_index]
 
-for q in questions:
-  user_answer = input(q["question"] + " ").lower()
-  if user_answer == q["answer"]:
-    armypoint += 1
-    print("To'g'ri!")
+st.write(f"**Savol {st.session_state.q_index + 1}:** {q}"]
+answer = st.text_input("Javobingiz:", key=st.session_state.q_index)
+
+if st.button("Tekshirish"):
+  if answer.lower() == correct:
+    st.succes("To'g'ri!)
+    st.st.session_state.score += 1
 else:
-  print("Noto'g'ri")
+  st.error("Noto'g'ri")
 
-print("\n--- Natija ---")
-print("Siz to'plagan armypointlar soni:", armypoint, )
- 
+st.session_state.q_index += 1
+st.rerun()
 
-
-
-
+else:
+    st.succes(f"Test tugadi! Siz {st.session_state.score} ta armypoint oldingiz")
 
 
-
-  
